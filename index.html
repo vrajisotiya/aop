@@ -4,79 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AOP Homeschool Curriculum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      xintegrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="custome.css" />
   </head>
   <body class="antialiased">
     <!-- Top Bar -->
     <div
-      class="bg-dark text-white small py-2 px-4 d-flex justify-content-between align-items-center"
+      class="text-white small py-2 px-4 d-flex justify-content-between align-items-center nav-top"
     >
-      <div class="d-flex align-items-center gap-4">
+      <div class="d-flex align-items-center gap-2">
         <span>Call 1-800-622-3070</span>
-        <span class="d-none d-sm-inline">|</span>
-        <span class="d-none d-sm-inline"
-          >Free Shipping 20% Off All Products starts 2/1/2022!</span
+        <i class="fa-solid fa-message"></i>
+      </div>
+      <div class="text-center">
+        <span class="d-none d-md-inline"
+          >Free Shipping 20% Off All Products starts 2/2/2022!</span
         >
       </div>
-      <div class="d-flex align-items-center gap-4">
-        <span>Login or (My Account)</span>
-        <svg
-          class="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          style="width: 1rem; height: 1rem"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
+      <div class="d-flex align-items-center gap-2">
+        <span>Login <i class="fa-solid fa-arrow-down fa-xs"></i></span>
+        <span>My Account <i class="fa-solid fa-arrow-down fa-xs"></i></span>
       </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-4">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+      <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img
-            src="https://placehold.co/40x40/4a90e2/ffffff?text=AOP"
+            src="/assets/logo.png"
             alt="AOP Logo"
-            class="rounded-circle me-2"
-            style="height: 40px; width: 40px"
+            width="100px"
+            height="50px"
           />
-          <span class="fs-4 fw-bold text-dark d-none d-md-block">AOP</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-3 gap-lg-4 me-auto me-md-0">
+
+        <div class="d-flex order-md-1 gap-3">
+          <!-- Search & Cart -->
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-link text-secondary me-2">
+              <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </button>
+            <button class="btn btn-link text-secondary p-0">
+              <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            </button>
+            0
+          </div>
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-md-0" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link text-secondary fw-medium" href="#"
                 >Homeschool Curriculum</a
@@ -96,51 +104,35 @@
               <a class="nav-link text-secondary fw-medium" href="#">Support</a>
             </li>
           </ul>
-          <div class="d-flex align-items-center gap-3 ms-md-4">
-            <button class="btn btn-link text-secondary p-0">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                style="width: 1.5rem; height: 1.5rem"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </button>
-            <button class="btn btn-link text-secondary p-0">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                style="width: 1.5rem; height: 1.5rem"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                ></path>
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white text-center">
+    <section class="hero-section">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full lg:w-8/12 px-4 hero-content">
+            <h1
+              class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            >
+              Build Confidence<br />And Character At Home
+            </h1>
+            <p class="text-white text-lg sm:text-xl mb-8 opacity-95">
+              Find your family's home learning solution & get 15% off in May.
+            </p>
+            <button class="btn cta-button text-sm sm:text-base">
+              GET STARTED
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="hero-section text-white text-center">
       <div class="hero-overlay"></div>
       <div class="container position-relative z-1">
-        <h1 class="display-4 fw-bold mb-4 lh-sm">
+        <h1 class="fw-bold mb-4 lh-sm">
           Build Confidence <br />
           And Character At Home
         </h1>
@@ -153,70 +145,65 @@
           GET STARTED
         </button>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Curriculum Categories Section -->
-    <section class="py-5 bg-white">
-      <div class="container px-4">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-          <!-- Monarch -->
-          <div class="col">
-            <div
-              class="icon-box p-4 rounded-3 d-flex flex-column align-items-center text-center card-shadow h-100"
-            >
-              <img
-                src="https://placehold.co/60x60/f5a623/ffffff?text=M"
-                alt="Monarch Icon"
-                class="mb-3"
-                style="width: 60px; height: 60px"
-              />
-              <h3 class="fs-4 fw-semibold text-dark">Monarch</h3>
-              <p class="text-secondary small">Grades 3-12</p>
+    <!-- programs -->
+    <section class="programs-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card monarch">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-laptop"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Monarch</h5>
+                  <p class="program-grade">Grades 3-12</p>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Lifepac -->
-          <div class="col">
-            <div
-              class="icon-box p-4 rounded-3 d-flex flex-column align-items-center text-center card-shadow h-100"
-            >
-              <img
-                src="https://placehold.co/60x60/4a90e2/ffffff?text=L"
-                alt="Lifepac Icon"
-                class="mb-3"
-                style="width: 60px; height: 60px"
-              />
-              <h3 class="fs-4 fw-semibold text-dark">Lifepac</h3>
-              <p class="text-secondary small">Grades K-12</p>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card lifepac">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Lifepac</h5>
+                  <p class="program-grade">Grades K-12</p>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Horizons -->
-          <div class="col">
-            <div
-              class="icon-box p-4 rounded-3 d-flex flex-column align-items-center text-center card-shadow h-100"
-            >
-              <img
-                src="https://placehold.co/60x60/8c60d3/ffffff?text=H"
-                alt="Horizons Icon"
-                class="mb-3"
-                style="width: 60px; height: 60px"
-              />
-              <h3 class="fs-4 fw-semibold text-dark">Horizons</h3>
-              <p class="text-secondary small">Grades PreK-12</p>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card horizons">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Horizons</h5>
+                  <p class="program-grade">Grades PreK-12</p>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- Academy -->
-          <div class="col">
-            <div
-              class="icon-box p-4 rounded-3 d-flex flex-column align-items-center text-center card-shadow h-100"
-            >
-              <img
-                src="https://placehold.co/60x60/4CAF50/ffffff?text=A"
-                alt="Academy Icon"
-                class="mb-3"
-                style="width: 60px; height: 60px"
-              />
-              <h3 class="fs-4 fw-semibold text-dark">Academy</h3>
-              <p class="text-secondary small">Grades PreK-12</p>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card academy">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Academy</h5>
+                  <p class="program-grade">Grades PreK-12</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,20 +219,11 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/f5a623/ffffff?text=Monarch+Image"
+                  src="assets/monarch.png"
                   class="card-img-top w-100 h-100"
                   alt="Monarch Curriculum"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
                 <div
                   class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
                 >
@@ -268,7 +246,7 @@
                   grading and record keeping.
                 </p>
                 <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                  class="d-flex flex-column flex-sm-row fy-content-between align-items-center gap-3"
                 >
                   <a
                     href="#"
@@ -290,20 +268,11 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/4a90e2/ffffff?text=Lifepac+Image"
+                  src="assets/lifepac.png"
                   class="card-img-top w-100 h-100"
                   alt="Lifepac Curriculum"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
                 <div
                   class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
                 >
@@ -348,20 +317,11 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/8c60d3/ffffff?text=Horizons+Image"
+                  src="assets/horizons.png"
                   class="card-img-top w-100 h-100"
                   alt="Horizons Curriculum"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+
                 <div
                   class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
                 >
@@ -406,20 +366,11 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/6A1B9A/ffffff?text=Ignite+Image"
+                  src="assets/ignite.png"
                   class="card-img-top w-100 h-100"
                   alt="Ignite Christian Academy"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
                 <div
                   class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
                 >
@@ -464,20 +415,11 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/E53935/ffffff?text=Robotify+Image"
+                  src="assets/robotify.png"
                   class="card-img-top w-100 h-100"
                   alt="Robotify"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
                 <div
                   class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
                 >
@@ -521,23 +463,16 @@
             <div class="card rounded-3 overflow-hidden shadow-sm h-100">
               <div class="position-relative card-img-h-48">
                 <img
-                  src="https://placehold.co/600x300/607D8B/ffffff?text=Help+Image"
+                  src="assets/card6 background.png"
                   class="card-img-top w-100 h-100"
                   alt="Help"
                 />
-                <div
-                  class="position-absolute top-0 start-0 w-100 h-100"
-                  style="
-                    background: linear-gradient(
-                      to top,
-                      rgba(0, 0, 0, 0.5) 0%,
-                      transparent 100%
-                    );
-                  "
-                ></div>
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
               </div>
               <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                <h3
+                  class="card-title fs-4 fw-semibold text-dark mb-2 text-center"
+                >
                   We're Here To Help
                 </h3>
                 <p class="card-text text-secondary mb-4">
@@ -572,8 +507,8 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      xintegrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
   </body>

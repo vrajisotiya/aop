@@ -1,40 +1,91 @@
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #f8f8f8; /* Light gray background */
 }
-.hero-section {
-  background-image: url("https://placehold.co/1920x600/667eea/ffffff?text=Background+Image"); /* Placeholder for the background image */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
-  padding-top: 8rem; /* py-20 equivalent */
-  padding-bottom: 8rem; /* py-20 equivalent */
-}
-@media (min-width: 768px) {
-  .hero-section {
-    padding-top: 12rem; /* md:py-32 equivalent */
-    padding-bottom: 12rem; /* md:py-32 equivalent */
-  }
-}
-@media (min-width: 992px) {
-  .hero-section {
-    padding-top: 15rem; /* lg:py-40 equivalent */
-    padding-bottom: 15rem; /* lg:py-40 equivalent */
+
+@media (max-width: 575.98px) {
+  .nav-top {
+    font-size: 0.8rem;
   }
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.hero-section {
+  background: url("assets/hero-background.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.card-shadow {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
 }
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.3rem; /* Default paragraph font size for desktop */
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0.375rem;
+}
+
+.cta-button:hover {
+  border-color: white;
+}
+
+/* Responsive adjustments using media queries */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0; /* Reduce padding on smaller screens */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem; /* Smaller font size for tablets and mobiles */
+  }
+
+  .hero-section p {
+    font-size: 1.1rem; /* Smaller paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 60px 0; /* Further reduce padding on very small screens */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem; /* Even smaller font size for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1rem; /* Even smaller paragraph font size */
+  }
+
+  .cta-button {
+    padding: 10px 0.8rem; /* Adjust button padding */
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}
+
 .btn-custom-primary {
   background-color: #4a90e2; /* Blue button */
   border-color: #4a90e2;
