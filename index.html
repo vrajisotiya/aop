@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOP Homeschool Curriculum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="custome.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Top Bar -->
+    <div
+      class="text-white small py-2 px-4 d-flex justify-content-between align-items-center nav-top"
+    >
+      <div class="d-flex align-items-center gap-2">
+        <span>Call 1-800-622-3070</span>
+        <i class="fa-solid fa-message"></i>
+      </div>
+      <div class="text-center">
+        <span class="d-none d-md-inline"
+          >Free Shipping 20% Off All Products starts 2/2/2022!</span
+        >
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <span>Login <i class="fa-solid fa-arrow-down fa-xs"></i></span>
+        <span>My Account <i class="fa-solid fa-arrow-down fa-xs"></i></span>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="/assets/logo.png"
+            alt="AOP Logo"
+            width="100px"
+            height="50px"
+          />
+        </a>
+
+        <div class="d-flex order-md-1 gap-3">
+          <!-- Search & Cart -->
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-link text-secondary me-2">
+              <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </button>
+            <button class="btn btn-link text-secondary p-0">
+              <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            </button>
+            0
+          </div>
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-md-0" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link text-secondary fw-medium" href="#"
+                >Homeschool Curriculum</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary fw-medium" href="#"
+                >How to Homeschool</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary fw-medium" href="#"
+                >Community</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary fw-medium" href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full lg:w-8/12 px-4 hero-content">
+            <h1
+              class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            >
+              Build Confidence<br />And Character At Home
+            </h1>
+            <p class="text-white text-lg sm:text-xl mb-8 opacity-95">
+              Find your family's home learning solution & get 15% off in May.
+            </p>
+            <button class="btn cta-button text-sm sm:text-base">
+              GET STARTED
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="hero-section text-white text-center">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-1">
+        <h1 class="fw-bold mb-4 lh-sm">
+          Build Confidence <br />
+          And Character At Home
+        </h1>
+        <p class="lead mb-5">
+          Find your family's home learning solution & get 15% off in May.
+        </p>
+        <button
+          class="btn btn-custom-primary text-white fw-semibold py-3 px-5 rounded-pill shadow-lg"
+        >
+          GET STARTED
+        </button>
+      </div>
+    </section> -->
+
+    <!-- programs -->
+    <section class="programs-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card monarch">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-laptop"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Monarch</h5>
+                  <p class="program-grade">Grades 3-12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card lifepac">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Lifepac</h5>
+                  <p class="program-grade">Grades K-12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card horizons">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Horizons</h5>
+                  <p class="program-grade">Grades PreK-12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card program-card academy">
+              <div class="card-body">
+                <div class="program-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <div class="program-text-content">
+                  <h5 class="program-title">Academy</h5>
+                  <p class="program-grade">Grades PreK-12</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Cards Section -->
+    <section class="py-5 bg-light">
+      <div class="container px-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Monarch Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/monarch.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Monarch Curriculum"
+                />
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Online</span
+                  >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Grades 3-12</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                  Monarch
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  Online Christian home learning curriculum with automated
+                  grading and record keeping.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row fy-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-custom-secondary text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    FREE TRIAL
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lifepac Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/lifepac.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Lifepac Curriculum"
+                />
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Print</span
+                  >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Grades K-12</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                  Lifepac
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  Parent-supported complete grade sets or individual courses
+                  that instill independence.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-custom-primary text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    15% OFF SALE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizons Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/horizons.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Horizons Curriculum"
+                />
+
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Print</span
+                  >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Grades PreK-12</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                  Horizons
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  Parent-supported workbooks to help kids excel where they have
+                  not mastered concepts.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-custom-purple text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    15% OFF SALE
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ignite Christian Academy Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/ignite.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Ignite Christian Academy"
+                />
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Online</span
+                  >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Grades PreK-12</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                  Ignite Christian Academy
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  Fully accredited online Christian Academy complete with
+                  student engagement activities.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-custom-purple text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    GET HELP
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Robotify Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/robotify.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Robotify"
+                />
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
+                >
+                  <span
+                    class="badge bg-white text-dark rounded-pill fw-semibold"
+                    >Gamified</span
+                  >
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
+                  Robotify
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  800+ Gamified Coding Activities
+                </p>
+                <p class="card-text text-secondary small mb-4">
+                  Access 100+ hours of robotics, STEM and programming courses in
+                  this Monarch elective.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-danger text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    FREE TRIAL
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- We're Here To Help Card -->
+          <div class="col">
+            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
+              <div class="position-relative card-img-h-48">
+                <img
+                  src="assets/card6 background.png"
+                  class="card-img-top w-100 h-100"
+                  alt="Help"
+                />
+                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
+              </div>
+              <div class="card-body p-4">
+                <h3
+                  class="card-title fs-4 fw-semibold text-dark mb-2 text-center"
+                >
+                  We're Here To Help
+                </h3>
+                <p class="card-text text-secondary mb-4">
+                  Our home learning experts can help you decide which option is
+                  best for your families' needs.
+                </p>
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
+                >
+                  <a
+                    href="#"
+                    class="text-secondary text-decoration-none fw-medium"
+                    >Learn More</a
+                  >
+                  <button
+                    class="btn btn-dark text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
+                  >
+                    GET HELP
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Basic example, can be expanded) -->
+    <footer class="bg-dark text-white py-4 text-center">
+      <p>&copy; 2025 AOP. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
