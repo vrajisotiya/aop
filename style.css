@@ -1,0 +1,88 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f8f8; /* Light gray background */
+}
+.hero-section {
+  background-image: url("https://placehold.co/1920x600/667eea/ffffff?text=Background+Image"); /* Placeholder for the background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding-top: 8rem; /* py-20 equivalent */
+  padding-bottom: 8rem; /* py-20 equivalent */
+}
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 12rem; /* md:py-32 equivalent */
+    padding-bottom: 12rem; /* md:py-32 equivalent */
+  }
+}
+@media (min-width: 992px) {
+  .hero-section {
+    padding-top: 15rem; /* lg:py-40 equivalent */
+    padding-bottom: 15rem; /* lg:py-40 equivalent */
+  }
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.btn-custom-primary {
+  background-color: #4a90e2; /* Blue button */
+  border-color: #4a90e2;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-custom-primary:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+}
+.btn-custom-secondary {
+  background-color: #f5a623; /* Orange button */
+  border-color: #f5a623;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-custom-secondary:hover {
+  background-color: #e0911a;
+  border-color: #e0911a;
+}
+.btn-custom-purple {
+  background-color: #8c60d3; /* Purple button */
+  border-color: #8c60d3;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-custom-purple:hover {
+  background-color: #7a4fbf;
+  border-color: #7a4fbf;
+}
+.icon-box {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+}
+.text-monarch {
+  color: #f5a623; /* Orange */
+}
+.text-lifepac {
+  color: #4a90e2; /* Blue */
+}
+.text-horizons {
+  color: #8c60d3; /* Purple */
+}
+.text-academy {
+  color: #4caf50; /* Green */
+}
+.img-fluid-custom {
+  max-width: 100%;
+  height: auto;
+}
+.card-img-h-48 {
+  height: 12rem; /* Equivalent to Tailwind's h-48 (16 * 3 = 48px, 1rem = 16px) */
+  object-fit: cover;
+}
