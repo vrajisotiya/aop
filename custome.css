@@ -11,11 +11,10 @@
 .program-card {
   background: rgba(255, 255, 255, 0.918);
   backdrop-filter: blur(10px);
-  border-radius: 8px;
+  border-radius: 8px !important;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin-top: 20px;
-  border: none;
   height: 100%;
 }
 
@@ -23,50 +22,51 @@
   transform: translateY(-5px);
 }
 
-.program-card .card-body {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  text-align: left;
+.program-card .program-card-body {
+  display: flex; /* Establishes a flex container */
+  flex: 1 1 auto;
+  align-items: center; /* Vertically centers items */
+  padding: 20px; /* Consistent padding inside the card */
+  text-align: left; /* Aligns text within the card to the left */
 }
 
 .program-icon {
-  font-size: 2.5rem;
-  margin-right: 15px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2.5rem; /* Icon size */
+  margin-right: 15px; /* Space between icon and text content */
+  flex-shrink: 0; /* Prevents the icon from shrinking */
+  display: flex; /* Use flex for icon itself to ensure proper centering if needed */
+  align-items: center; /* Center the icon vertically within its own div */
+  justify-content: center; /* Center the icon horizontally within its own div */
 }
 
 .program-title {
   font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 5px;
-  line-height: 1.2;
+  margin-bottom: 5px; /* Space between title and grade */
+  line-height: 1.2; /* Improve line spacing for title */
 }
 
 .program-grade {
   font-size: 0.9rem;
-  opacity: 0.7;
-  margin: 0;
+  margin: 0; /* Remove default margins */
 }
 
+/* Color classes remain the same */
 .monarch {
   color: #ea9f22;
-  border: 2px solid #ea9f22;
+  border: 2px solid #ea9f22 !important;
 }
 .lifepac {
   color: #2ab5cc;
-  border: 2px solid #2ab5cc;
+  border: 2px solid #2ab5cc !important;
 }
 .horizons {
-  color: #7687c3;
-  border: 2px solid #7687c3;
+  color: #7686c5;
+  border: 2px solid #7686c5 !important;
 }
 .academy {
   color: #45447f;
-  border: 2px solid #45447f;
+  border: 2px solid #45447f !important;
 }
 
 @media (max-width: 768px) {
@@ -80,7 +80,6 @@
   }
 
   .program-icon {
-    margin-right: 0; /* Remove horizontal margin */
-    margin-bottom: 15px; /* Add vertical margin for stacking */
+    margin-right: 20px;
   }
 }
