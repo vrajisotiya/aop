@@ -74,6 +74,10 @@
     margin-top: -70px;
   }
 
+  .program-card-body {
+    justify-content: center;
+  }
+
   .program-card .card-body {
     flex-direction: column; /* Stack icon and text vertically on smaller screens */
     text-align: center; /* Center content when stacked */
