@@ -131,7 +131,7 @@
   background-color: var(--robotify);
 }
 .btn-custom-robotify {
-  background-color: var(--robotify);
+  background-color: var(--btn-robotify);
   color: var(--white);
 }
 .btn-custom-robotify:hover {
