@@ -136,12 +136,6 @@ body {
   border-color: white;
 }
 
-@media (max-width: 575.98px) {
-  .nav-top {
-    font-size: 0.8rem;
-  }
-}
-
 @media (max-width: 768px) {
   .hero-section {
     padding: 80px 0;
