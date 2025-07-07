@@ -24,8 +24,12 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <!-- CSS link -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="custome.css" />
+    <link rel="stylesheet" href="program-card.css" />
+    <link rel="stylesheet" href="product-card.css" />
+    <link rel="stylesheet" href="bottom-section.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body class="antialiased">
     <!-- Top Bar -->
@@ -42,13 +46,13 @@
         >
       </div>
       <div class="d-flex align-items-center gap-2">
-        <span>Login <i class="fa-solid fa-arrow-down fa-xs"></i></span>
-        <span>My Account <i class="fa-solid fa-arrow-down fa-xs"></i></span>
+        <span>{Login <i class="fa-solid fa-arrow-down fa-xs"></i>}</span>
+        <span>{My Account <i class="fa-solid fa-arrow-down fa-xs"></i>}</span>
       </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-2">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img
@@ -86,22 +90,16 @@
         <div class="collapse navbar-collapse order-md-0" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-medium" href="#"
-                >Homeschool Curriculum</a
-              >
+              <a class="nav-link fw-medium" href="#">Homeschool Curriculum</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-medium" href="#"
-                >How to Homeschool</a
-              >
+              <a class="nav-link fw-medium" href="#">How to Homeschool</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-medium" href="#"
-                >Community</a
-              >
+              <a class="nav-link fw-medium" href="#">Community</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-secondary fw-medium" href="#">Support</a>
+              <a class="nav-link fw-medium" href="#">Support</a>
             </li>
           </ul>
         </div>
@@ -109,7 +107,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="hero-section">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
           <div class="w-full lg:w-8/12 px-4 hero-content">
@@ -129,31 +127,13 @@
       </div>
     </section>
 
-    <!-- <section class="hero-section text-white text-center">
-      <div class="hero-overlay"></div>
-      <div class="container position-relative z-1">
-        <h1 class="fw-bold mb-4 lh-sm">
-          Build Confidence <br />
-          And Character At Home
-        </h1>
-        <p class="lead mb-5">
-          Find your family's home learning solution & get 15% off in May.
-        </p>
-        <button
-          class="btn btn-custom-primary text-white fw-semibold py-3 px-5 rounded-pill shadow-lg"
-        >
-          GET STARTED
-        </button>
-      </div>
-    </section> -->
-
     <!-- programs -->
-    <section class="programs-section">
+    <section class="programs-section" id="program-section">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card program-card monarch">
-              <div class="card-body">
+              <div class="program-card-body">
                 <div class="program-icon">
                   <i class="fas fa-laptop"></i>
                 </div>
@@ -165,9 +145,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card program-card lifepac">
-              <div class="card-body">
+              <div class="program-card-body">
                 <div class="program-icon">
                   <i class="fas fa-book-open"></i>
                 </div>
@@ -179,9 +159,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card program-card horizons">
-              <div class="card-body">
+              <div class="program-card-body">
                 <div class="program-icon">
                   <i class="fas fa-book"></i>
                 </div>
@@ -193,9 +173,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="card program-card academy">
-              <div class="card-body">
+              <div class="program-card-body">
                 <div class="program-icon">
                   <i class="fas fa-desktop"></i>
                 </div>
@@ -211,287 +191,192 @@
     </section>
 
     <!-- Product Cards Section -->
-    <section class="py-5 bg-light">
-      <div class="container px-4">
+    <section id="product-card">
+      <div class="container py-5">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <!-- Monarch Card -->
+          <!-- Card 1: monarch -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
+            <div class="card h-100">
+              <div class="card-header-custom header-monarch">
+                <!-- Overlay div -->
+                <div class="card-header-overlay product-monarch"></div>
+                <!-- Logo and badges remain on top of the overlay -->
                 <img
                   src="assets/monarch.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Monarch Curriculum"
+                  alt="Ignite Logo"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
                 />
-                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
-                >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Online</span
+                <div class="card-badges mb-2">
+                  <span class="badge"
+                    ><i class="fas fa-desktop me-2"></i>Online</span
                   >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Grades 3-12</span
-                  >
+                  <span class="badge">Grades 3-12</span>
                 </div>
               </div>
-              <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
-                  Monarch
-                </h3>
-                <p class="card-text text-secondary mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Online, Parent-Supported</h5>
+                <p class="card-text">
                   Online Christian home learning curriculum with automated
                   grading and record keeping.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row fy-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-custom-secondary text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    FREE TRIAL
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-monarch">FREE TRIAL</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Lifepac Card -->
+          <!-- Card 2 lifepac -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
+            <div class="card h-100">
+              <div class="card-header-custom header-lifepac">
+                <!-- Overlay div -->
+                <div class="card-header-overlay product-lifepac"></div>
+                <!-- Logo and badges remain on top of the overlay -->
                 <img
                   src="assets/lifepac.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Lifepac Curriculum"
+                  alt="Ignite Logo"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
                 />
-                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
-                >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Print</span
+                <div class="card-badges mb-2">
+                  <span class="badge"
+                    ><i class="fa-solid fa-book-open me-2"></i>Print</span
                   >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Grades K-12</span
-                  >
+                  <span class="badge">Class K-12</span>
                 </div>
               </div>
-              <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
-                  Lifepac
-                </h3>
-                <p class="card-text text-secondary mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Print, Mastery Learning</h5>
+                <p class="card-text">
                   Parent-supported complete grade sets or individual courses
                   that instill independence.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-custom-primary text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    15% OFF SALE
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-lifepac">15% OFF SALE</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Horizons Card -->
+          <!-- Card 3 horizons -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
+            <div class="card h-100">
+              <div class="card-header-custom header-horizon">
+                <!-- Overlay div -->
+                <div class="card-header-overlay product-horizon"></div>
+                <!-- Logo and badges remain on top of the overlay -->
                 <img
                   src="assets/horizons.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Horizons Curriculum"
+                  alt="Ignite Logo"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
                 />
-
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
-                >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Print</span
+                <div class="card-badges mb-2">
+                  <span class="badge"
+                    ><i class="fa-solid fa-book-open me-2"></i>Print</span
                   >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Grades PreK-12</span
-                  >
+                  <span class="badge">Grades Pre-12</span>
                 </div>
               </div>
-              <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
-                  Horizons
-                </h3>
-                <p class="card-text text-secondary mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Print, Spiral Learning</h5>
+                <p class="card-text">
                   Parent-supported workbooks to help kids excel where they have
                   not mastered concepts.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-custom-purple text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    15% OFF SALE
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-horizon">15% OFF SALE</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Ignite Christian Academy Card -->
+          <!-- Card 4: Ignite Christian Academy -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
+            <div class="card h-100">
+              <div class="card-header-custom header-ignite">
+                <!-- Overlay div -->
+                <div class="card-header-overlay product-ignite"></div>
+                <!-- Logo and badges remain on top of the overlay -->
                 <img
                   src="assets/ignite.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Ignite Christian Academy"
+                  alt="Ignite Logo"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
                 />
-                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
-                >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Online</span
+                <div class="card-badges mb-2">
+                  <span class="badge"
+                    ><i class="fas fa-desktop me-2"></i>Online</span
                   >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Grades PreK-12</span
-                  >
+                  <span class="badge">Grades PreK-12</span>
                 </div>
               </div>
-              <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
-                  Ignite Christian Academy
-                </h3>
-                <p class="card-text text-secondary mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Online, Teacher & Tutor Supported</h5>
+                <p class="card-text">
                   Fully accredited online Christian Academy complete with
                   student engagement activities.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-custom-purple text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    GET HELP
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-ignite">GET HELP</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Robotify Card -->
+          <!-- Card 5: robotify -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
+            <div class="card h-100">
+              <div class="card-header-custom header-robotify">
+                <!-- Overlay div -->
+                <div class="card-header-overlay product-robotify"></div>
+                <!-- Logo and badges remain on top of the overlay -->
                 <img
                   src="assets/robotify.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Robotify"
+                  alt="Ignite Logo"
+                  class="img-fluid mb-3"
+                  style="max-width: 300px; z-index: 2; position: relative"
                 />
-                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 d-flex align-items-center gap-2"
-                >
-                  <span
-                    class="badge bg-white text-dark rounded-pill fw-semibold"
-                    >Gamified</span
+                <div class="card-badges mb-2">
+                  <span class="badge"
+                    ><i class="fas fa-desktop me-2"></i>Online</span
                   >
+                  <span class="badge">Grades 3-12</span>
                 </div>
               </div>
-              <div class="card-body p-4">
-                <h3 class="card-title fs-4 fw-semibold text-dark mb-2">
-                  Robotify
-                </h3>
-                <p class="card-text text-secondary mb-4">
-                  800+ Gamified Coding Activities
-                </p>
-                <p class="card-text text-secondary small mb-4">
+              <div class="card-body">
+                <h5 class="card-title">800+ Gamified Coding Activities</h5>
+                <p class="card-text">
                   Access 100+ hours of robotics, STEM and programming courses in
                   this Monarch elective.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-danger text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    FREE TRIAL
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-robotify">FREE TRIAL</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- We're Here To Help Card -->
+          <!-- Card 6: we are help -->
           <div class="col">
-            <div class="card rounded-3 overflow-hidden shadow-sm h-100">
-              <div class="position-relative card-img-h-48">
-                <img
-                  src="assets/card6 background.png"
-                  class="card-img-top w-100 h-100"
-                  alt="Help"
-                />
-                <div class="position-absolute top-0 start-0 w-100 h-100"></div>
-              </div>
-              <div class="card-body p-4">
-                <h3
-                  class="card-title fs-4 fw-semibold text-dark mb-2 text-center"
-                >
-                  We're Here To Help
-                </h3>
-                <p class="card-text text-secondary mb-4">
+            <div class="card h-100">
+              <div class="card-header-custom header-help"></div>
+              <div class="card-body">
+                <h5 class="card-title">We're Here To Help</h5>
+                <p class="card-text">
                   Our home learning experts can help you decide which option is
                   best for your families' needs.
                 </p>
-                <div
-                  class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"
-                >
-                  <a
-                    href="#"
-                    class="text-secondary text-decoration-none fw-medium"
-                    >Learn More</a
-                  >
-                  <button
-                    class="btn btn-dark text-white fw-semibold py-2 px-4 rounded-pill shadow-sm"
-                  >
-                    GET HELP
-                  </button>
+                <div class="card-buttons mt-auto">
+                  <a href="#" class="btn btn-learn-more">Learn More</a>
+                  <a href="#" class="btn btn-custom-help">GET HELP</a>
                 </div>
               </div>
             </div>
@@ -500,9 +385,268 @@
       </div>
     </section>
 
-    <!-- Footer (Basic example, can be expanded) -->
-    <footer class="bg-dark text-white py-4 text-center">
-      <p>&copy; 2025 AOP. All rights reserved.</p>
+    <!-- CUSTOM BLUE THEME SECTION -->
+    <!-- Top Section: Explore Subject Specific Support -->
+    <section class="section-bg-blue py-5" id="custome-top-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content Block -->
+          <div class="col-lg-6">
+            <p class="text-uppercase-custom mb-2">Help Your Child Excel</p>
+            <h1 class="heading-1-custom mb-4">
+              Explore Subject Specific Support
+            </h1>
+            <p class="paragraph-lg-custom mb-4">
+              Awaken minds and inspire learning with free activities, resources
+              and trials designed to inspire, build confidence and help your
+              home learner thrive.
+            </p>
+            <button class="btn btn-primary-custom">EXPLORE NOW</button>
+
+            <blockquote class="blockquote-custom">
+              "I love the fact that I have a complete education and that every
+              single subject is focused on Christ. Even my math projects!"
+              <footer>Madeline S. | Ignite Christian Academy Student</footer>
+            </blockquote>
+          </div>
+
+          <!-- Right Image/Illustration Block -->
+          <div
+            class="col-lg-6 d-flex justify-content-center justify-content-lg-end"
+          >
+            <!-- Placeholder for the illustration/image -->
+            <img
+              src="assets/ignite logo.png"
+              alt="Learning Illustration"
+              class="img-fluid image-style-custom"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Section: Moments of Connection & Home Learning Community -->
+    <section class="section-bg-blue py-5" id="custome-bottom-section">
+      <div class="container">
+        <div class="row align-items-start">
+          <!-- Left Video Block -->
+          <div class="col-lg-6">
+            <div class="video-wrapper-custom">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/LD8pokENoLg?si=M0_iOCr4PnWCC6m6"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Right Content Block -->
+          <div class="col-lg-6">
+            <p class="text-uppercase-custom mb-2">
+              Join the Home Learning Community
+            </p>
+            <h2 class="heading-2-custom mb-3">
+              Curious If Home Learning Is Right For You?
+            </h2>
+            <p class="paragraph-lg-custom mb-4">
+              Explore moments of connection with real AOP families to hear the
+              highlights and obstacles from their home learning journeys or
+              schedule a call with one of our friendly and helpful home-learning
+              experts to get your questions answered!
+            </p>
+            <button class="btn btn-primary-custom">GET STARTED</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-section" id="bottom-section">
+      <div class="container-fluid py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <h1 class="display-5 fw-bold mb-4">
+              Getting Started With Home Learning Is Easier Than You Think
+            </h1>
+            <p class="fs-5 mb-5 mx-auto" style="max-width: 750px">
+              Browse curriculum and resources designed with home learners in
+              mind and subscribe to receive home learning help to your inbox for
+              support along the way.
+            </p>
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-center gap-3"
+            >
+              <a href="#" class="btn btn-bottom-section fw-bold"
+                >DOWNLOAD CATALOG</a
+              >
+              <a href="#" class="btn btn-bottom-section fw-bold"
+                >SUBSCRIBE FOR HELPFUL TIPS</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-section my-5" id="logo-section">
+      <div class="container text-center mt-5 mb-5 fw-bold">
+        AOP has been the leader in award-winning, christian homeschooling for 45
+        years counting!
+      </div>
+      <img
+        class="brands-logo mb-5"
+        src="assets/brand logo.png"
+        alt="Brands Logo"
+      />
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <h6 class="text-uppercase mb-3">Solutions</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Commerce</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Insights</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <h6 class="text-uppercase mb-3">Solutions</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Commerce</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Insights</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <h6 class="text-uppercase mb-3">Solutions</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Commerce</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Insights</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2 mb-4">
+            <h6 class="text-uppercase mb-3">Solutions</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Marketing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Analytics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Commerce</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Insights</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-4 mb-4">
+            <h6 class="text-uppercase mb-3">About AOP Lorem Ipsum</h6>
+            <p class="text-secondary">
+              The latest homeschool news, articles, and resources, sent to your
+              inbox weekly.
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="bottom-custom-text mb-0">
+              Eget consectetur nunc turpis risus. Links.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <a href="#" class="custom-icon mx-2"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="custom-icon mx-2"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="custom-icon mx-2"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="custom-icon mx-2"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="#" class="custom-icon mx-2"
+              ><i class="fab fa-dribbble"></i
+            ></a>
+          </div>
+        </div>
+        <div class="sticky-contact-widget mt-3">
+          <button class="btn btn-lg">Sticky Contact Widget</button>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->

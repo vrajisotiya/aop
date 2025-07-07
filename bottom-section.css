@@ -1,0 +1,158 @@
+.section-bg-blue {
+  background-color: var(--bottom-section);
+}
+
+.btn-primary-custom {
+  background-color: var(--btn-theme);
+  border-color: var(--btn-theme);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.btn-primary-custom:hover {
+  background-color: var(--btn-theme-hover);
+  border-color: var(--btn-theme);
+  color: var(--white);
+}
+
+.text-uppercase-custom {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bottom-text);
+  font-weight: 600;
+}
+
+.heading-1-custom {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--bottom-heading);
+  line-height: 1.25;
+}
+
+.heading-2-custom {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--bottom-heading);
+  line-height: 1.25;
+}
+
+.paragraph-lg-custom {
+  font-size: 1.125rem;
+  color: var(--bottom-heading);
+}
+
+.blockquote-custom {
+  border-top: 1px solid #d1d5db;
+  color: var(--block-quote);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+.blockquote-custom footer {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--bottom-heading);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.video-wrapper-custom {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+}
+
+.video-wrapper-custom iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* bottom section */
+
+.bottom-section {
+  background: var(--navbar-background);
+  color: var(--white);
+  text-align: center;
+}
+
+.btn-bottom-section {
+  background-color: var(--white);
+  color: var(--btn-bottom);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.btn-bottom-section:hover {
+  background-color: #ffffffd3;
+  color: var(--btn-bottom);
+}
+
+/* brand logos */
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--bottom-heading);
+  font-size: 1.8rem;
+}
+
+.brands-logo {
+  width: 60%;
+}
+
+@media (max-width: 991px) {
+  .image-style-custom {
+    display: none;
+  }
+  .text-uppercase-custom {
+    margin-top: 15px;
+  }
+  .brands-logo {
+    width: 70%;
+  }
+}
+
+@media (min-width: 576px) {
+  .heading-1-custom {
+    font-size: 3rem;
+  }
+  .heading-2-custom {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .brands-logo {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .brands-logo {
+    width: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom-section .btn {
+    width: 70%;
+    display: block;
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .video-wrapper-custom {
+    margin-top: 10%;
+  }
+}

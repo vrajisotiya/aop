@@ -1,0 +1,86 @@
+.programs-section {
+  margin-top: -100px;
+  position: relative;
+  z-index: 3;
+  padding: 0 20px 60px;
+}
+
+.program-card {
+  background: #ffffffea;
+  backdrop-filter: blur(10px);
+  border-radius: 8px !important;
+  box-shadow: 0 8px 30px #0000001a;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card .program-card-body {
+  display: flex; /* Establishes a flex container */
+  flex: 1 1 auto;
+  align-items: center; /* Vertically centers items */
+  padding: 20px; /* Consistent padding inside the card */
+  text-align: left; /* Aligns text within the card to the left */
+}
+
+.program-icon {
+  font-size: 2.5rem; /* Icon size */
+  margin-right: 15px; /* Space between icon and text content */
+  flex-shrink: 0; /* Prevents the icon from shrinking */
+  display: flex; /* Use flex for icon itself to ensure proper centering if needed */
+  align-items: center; /* Center the icon vertically within its own div */
+  justify-content: center; /* Center the icon horizontally within its own div */
+}
+
+.program-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 5px; /* Space between title and grade */
+  line-height: 1.2; /* Improve line spacing for title */
+}
+
+.program-grade {
+  font-size: 0.9rem;
+  margin: 0; /* Remove default margins */
+}
+
+/* Color classes remain the same */
+.monarch {
+  color: var(--monarch-program);
+  border: 2px solid #ea9f22 !important;
+}
+.lifepac {
+  color: var(--navbar-background);
+  border: 2px solid #2ab5cc !important;
+}
+.horizons {
+  color: var(--btn-horizon);
+  border: 2px solid #7686c5 !important;
+}
+.academy {
+  color: var(--btn-ignite);
+  border: 2px solid #45447f !important;
+}
+
+@media (max-width: 768px) {
+  .programs-section {
+    margin-top: -70px;
+  }
+
+  .program-card-body {
+    justify-content: center;
+  }
+
+  .program-card .card-body {
+    flex-direction: column; /* Stack icon and text vertically on smaller screens */
+    text-align: center; /* Center content when stacked */
+  }
+
+  .program-icon {
+    margin-right: 20px;
+  }
+}

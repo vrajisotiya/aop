@@ -1,12 +1,66 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #f8f8f8; /* Light gray background */
+:root {
+  --black: #00000033;
+  --white: #fff;
+
+  --navbar-background: #2ab5cc;
+
+  --btn-theme: #1c8a9c;
+  --btn-theme-hover: #2b7480;
+
+  --monarch-program: #ea9f22;
+
+  --monarch: #fcb13bbf;
+  --btn-monarch: #fcb13b;
+  --btn-monarch-hover: #fcb13bdc;
+
+  --lifepac: #2ab5ccbf;
+  --btn-lifepac: #27b6cd;
+  --btn-lifepac-hover: #27b6cddc;
+
+  --horizon: #7686c5bf;
+  --btn-horizon: #7686c5;
+  --btn-horizon-hover: #7686c5dc;
+
+  --lifeignitepac: #45447fbf;
+  --btn-ignite: #45447f;
+  --btn-ignite-hover: #45447fdc;
+
+  --robotify: #ee5253bf;
+
+  --btn-help: #003c51;
+  --btn-help-hover: #003c51dc;
+
+  --btn-learn: #374151;
+  --btn-learn-border: #d1d5db;
+  --btn-learn-border-hover: #212529;
+
+  --product-card-title: #343a40;
+
+  --bottom-section: #e5fafb;
+  --bottom-text: #828282;
+  --bottom-heading: #374151;
+  --block-quote: #6b7280;
+
+  --btn-bottom: #111827;
+
+  --footer-background: #1f2937;
+  --footer-link: #d1d5db;
+  --footer-text: #d1d5db;
+  --footer-icon: #9ca3af;
+
+  --footer-btn-sticky: #2190a3;
 }
 
-@media (max-width: 575.98px) {
-  .nav-top {
-    font-size: 0.8rem;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-top {
+  background-color: var(--navbar-background);
+}
+
+.nav-link:hover {
+  color: var(--btn-theme);
 }
 
 .hero-section {
@@ -32,7 +86,7 @@ body {
 }
 
 .hero-section p {
-  font-size: 1.3rem; /* Default paragraph font size for desktop */
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   opacity: 0.95;
 }
@@ -52,88 +106,41 @@ body {
   border-color: white;
 }
 
-/* Responsive adjustments using media queries */
+@media (max-width: 575.98px) {
+  .nav-top {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
-    padding: 80px 0; /* Reduce padding on smaller screens */
+    padding: 80px 0;
   }
 
   .hero-section h1 {
-    font-size: 2.5rem; /* Smaller font size for tablets and mobiles */
+    font-size: 2.5rem;
   }
 
   .hero-section p {
-    font-size: 1.1rem; /* Smaller paragraph font size */
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 60px 0; /* Further reduce padding on very small screens */
+    padding: 60px 0;
   }
 
   .hero-section h1 {
-    font-size: 2rem; /* Even smaller font size for mobile */
+    font-size: 2rem;
   }
 
   .hero-section p {
-    font-size: 1rem; /* Even smaller paragraph font size */
+    font-size: 1rem;
   }
 
   .cta-button {
-    padding: 10px 0.8rem; /* Adjust button padding */
-    font-size: 0.9rem; /* Adjust button font size */
+    padding: 10px 0.8rem;
+    font-size: 0.9rem;
   }
-}
-
-.btn-custom-primary {
-  background-color: #4a90e2; /* Blue button */
-  border-color: #4a90e2;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-.btn-custom-primary:hover {
-  background-color: #357abd;
-  border-color: #357abd;
-}
-.btn-custom-secondary {
-  background-color: #f5a623; /* Orange button */
-  border-color: #f5a623;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-.btn-custom-secondary:hover {
-  background-color: #e0911a;
-  border-color: #e0911a;
-}
-.btn-custom-purple {
-  background-color: #8c60d3; /* Purple button */
-  border-color: #8c60d3;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-.btn-custom-purple:hover {
-  background-color: #7a4fbf;
-  border-color: #7a4fbf;
-}
-.icon-box {
-  background-color: white;
-  border: 1px solid #e0e0e0;
-}
-.text-monarch {
-  color: #f5a623; /* Orange */
-}
-.text-lifepac {
-  color: #4a90e2; /* Blue */
-}
-.text-horizons {
-  color: #8c60d3; /* Purple */
-}
-.text-academy {
-  color: #4caf50; /* Green */
-}
-.img-fluid-custom {
-  max-width: 100%;
-  height: auto;
-}
-.card-img-h-48 {
-  height: 12rem; /* Equivalent to Tailwind's h-48 (16 * 3 = 48px, 1rem = 16px) */
-  object-fit: cover;
 }
