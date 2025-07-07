@@ -31,7 +31,7 @@
 
 /* Styling for the sticky contact widget */
 .sticky-contact-widget {
-  position: sticky;
+  position: fixed;
   bottom: 1px;
   right: 1px;
   width: fit-content;
