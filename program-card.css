@@ -1,6 +1,3 @@
-.nav-top {
-  background-color: #2ab5cc;
-}
 .programs-section {
   margin-top: -100px;
   position: relative;
@@ -9,10 +6,10 @@
 }
 
 .program-card {
-  background: rgba(255, 255, 255, 0.918);
+  background: #ffffffea;
   backdrop-filter: blur(10px);
   border-radius: 8px !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px #0000001a;
   transition: transform 0.3s ease;
   margin-top: 20px;
   height: 100%;
@@ -53,19 +50,19 @@
 
 /* Color classes remain the same */
 .monarch {
-  color: #ea9f22;
+  color: var(--monarch-program);
   border: 2px solid #ea9f22 !important;
 }
 .lifepac {
-  color: #2ab5cc;
+  color: var(--navbar-background);
   border: 2px solid #2ab5cc !important;
 }
 .horizons {
-  color: #7686c5;
+  color: var(--btn-horizon);
   border: 2px solid #7686c5 !important;
 }
 .academy {
-  color: #45447f;
+  color: var(--btn-ignite);
   border: 2px solid #45447f !important;
 }
 

@@ -1,12 +1,12 @@
 .card {
   border-radius: 0.5rem;
   overflow: hidden; /* Ensures header corners are rounded within card */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem #0000001a;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem #00000026;
 }
 .card-header-custom {
   padding: 1.5rem;
@@ -32,7 +32,7 @@
   z-index: 2; /* Ensure badges are above overlay */
 }
 .card-badges .badge {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--black);
   padding: 8px 15px 8px 15px;
   border: 1px solid white;
   border-radius: 20px;
@@ -57,17 +57,17 @@
 }
 
 .product-monarch {
-  background-color: rgba(252, 177, 59, 0.75);
+  background-color: var(--monarch);
 }
 
 .btn-custom-monarch {
-  background-color: rgba(252, 177, 59, 1);
-  color: #fff;
+  background-color: var(--btn-monarch);
+  color: var(--white);
 }
 
 .btn-custom-monarch:hover {
-  background-color: rgba(252, 177, 59, 0.863);
-  color: #fff;
+  background-color: var(--btn-monarch-hover);
+  color: var(--white);
 }
 
 /* lifepac card */
@@ -76,17 +76,17 @@
 }
 
 .product-lifepac {
-  background-color: rgba(42, 181, 204, 0.75);
+  background-color: var(--lifepac);
 }
 
 .btn-custom-lifepac {
-  background-color: rgba(39, 182, 205, 1);
-  color: #fff;
+  background-color: var(--btn-lifepac);
+  color: var(--white);
 }
 
 .btn-custom-lifepac:hover {
-  background-color: rgba(39, 182, 205, 0.863);
-  color: #fff;
+  background-color: var(--btn-lifepac-hover);
+  color: var(--white);
 }
 
 /* horizon */
@@ -94,34 +94,33 @@
   background-image: url("assets/horizons-bg.png");
 }
 .product-horizon {
-  background-color: rgba(118, 134, 197, 0.75);
+  background-color: var(--horizon);
 }
 .btn-custom-horizon {
-  background-color: rgba(118, 134, 197, 1);
-  color: #fff;
+  background-color: var(--btn-horizon);
+  color: var(--white);
 }
 .btn-custom-horizon:hover {
-  background-color: rgba(118, 134, 197, 0.863);
-  color: #fff;
+  background-color: var(--btn-horizon-hover);
+  color: var(--white);
 }
 
 /* ignite */
 .header-ignite {
-  background-image: url("assets/ignite-bg.jpg"); /* Placeholder image */
-  background-color: #673ab7; /* Fallback color if image fails */
+  background-image: url("assets/ignite-bg.jpg");
 }
 
 .product-ignite {
-  background-color: rgba(69, 68, 127, 0.75);
+  background-color: var(--ignite);
 }
 
 .btn-custom-ignite {
-  background-color: rgba(69, 68, 127, 1);
-  color: #fff;
+  background-color: var(--btn-ignite);
+  color: var(--white);
 }
 .btn-custom-ignite:hover {
-  background-color: rgba(69, 68, 127, 0.863);
-  color: #fff;
+  background-color: var(--btn-ignite-hover);
+  color: var(--white);
 }
 
 /* robotify */
@@ -129,15 +128,15 @@
   background-image: url("assets/robotify-bg.png");
 }
 .product-robotify {
-  background-color: rgba(238, 82, 83, 0.75);
+  background-color: var(--robotify);
 }
 .btn-custom-robotify {
-  background-color: rgba(238, 82, 83, 1);
-  color: #fff;
+  background-color: var(--robotify);
+  color: var(--white);
 }
 .btn-custom-robotify:hover {
-  background-color: rgba(238, 82, 83, 0.863);
-  color: #fff;
+  background-color: var(--btn-robotify-hover);
+  color: var(--white);
 }
 
 /* help */
@@ -146,23 +145,23 @@
 }
 
 .btn-custom-help {
-  background-color: rgba(0, 60, 81, 1);
-  color: #fff;
+  background-color: var(--btn-help);
+  color: var(--white);
 }
 .btn-custom-help:hover {
-  background-color: rgba(0, 60, 81, 0.863);
-  color: #fff;
+  background-color: var(--btn-help-hover);
+  color: var(--white);
 }
 
 .btn-learn-more {
   border: 1px solid;
-  border-color: rgba(209, 213, 219, 1);
-  color: rgba(55, 65, 81, 1);
+  border-color: var(--btn-learn-border);
+  color: var(--btn-learn);
   transition: all 0.2s ease-in-out;
 }
 .btn-learn-more:hover {
-  border-color: #212529;
-  color: rgba(55, 65, 81, 1);
+  border-color: var(--btn-learn-border-hover);
+  color: var(--btn-learn);
 }
 
 .card-body {
@@ -170,20 +169,20 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pushes buttons to the bottom */
-  height: 100%; /* Ensures card body takes full height */
+  justify-content: space-between;
+  height: 100%;
 }
 .card-body .card-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: #343a40;
+  color: var(--product-card-title);
 }
 .card-body .card-text {
   font-size: 0.95rem;
-  color: rgba(55, 65, 81, 1);
-  margin-bottom: 1.5rem; /* Space before buttons */
-  flex-grow: 1; /* Allows text to take available space */
+  color: var(--btn-learn);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 .card-buttons {
   display: flex;

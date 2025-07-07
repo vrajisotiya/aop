@@ -1,14 +1,66 @@
 :root {
+  --black: #00000033;
+  --white: #fff;
+
+  --navbar-background: #2ab5cc;
+
+  --btn-theme: #1c8a9c;
+  --btn-theme-hover: #2b7480;
+
+  --monarch-program: #ea9f22;
+
+  --monarch: #fcb13bbf;
+  --btn-monarch: #fcb13b;
+  --btn-monarch-hover: #fcb13bdc;
+
+  --lifepac: #2ab5ccbf;
+  --btn-lifepac: #27b6cd;
+  --btn-lifepac-hover: #27b6cddc;
+
+  --horizon: #7686c5bf;
+  --btn-horizon: #7686c5;
+  --btn-horizon-hover: #7686c5dc;
+
+  --lifeignitepac: #45447fbf;
+  --btn-ignite: #45447f;
+  --btn-ignite-hover: #45447fdc;
+
+  --robotify: #ee5253bf;
+
+  --btn-help: #003c51;
+  --btn-help-hover: #003c51dc;
+
+  --btn-learn: #374151;
+  --btn-learn-border: #d1d5db;
+  --btn-learn-border-hover: #212529;
+
+  --product-card-title: #343a40;
+
+  --bottom-section: #e5fafb;
+  --bottom-text: #828282;
+  --bottom-heading: #374151;
+  --block-quote: #6b7280;
+
+  --btn-bottom: #111827;
+
+  --footer-background: #1f2937;
+  --footer-link: #d1d5db;
+  --footer-text: #d1d5db;
+  --footer-icon: #9ca3af;
+
+  --footer-btn-sticky: #2190a3;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
-@media (max-width: 575.98px) {
-  .nav-top {
-    font-size: 0.8rem;
-  }
+.nav-top {
+  background-color: var(--navbar-background);
+}
+
+.nav-link:hover {
+  color: var(--btn-theme);
 }
 
 .hero-section {
@@ -52,6 +104,12 @@ body {
 
 .cta-button:hover {
   border-color: white;
+}
+
+@media (max-width: 575.98px) {
+  .nav-top {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
