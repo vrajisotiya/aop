@@ -1,0 +1,62 @@
+.footer-section {
+  background-color: #1f2937; /* Dark blue background, similar to the image */
+  color: #ecf0f1; /* Light text color for general footer text */
+  position: relative; /* Needed for positioning the sticky widget if it's inside the footer */
+}
+
+.footer-section ul li a {
+  color: #d1d5db !important; /* Lighter grey for links, important to override Bootstrap's text-secondary */
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff !important; /* White on hover */
+}
+
+.footer-section .text-secondary {
+  color: #d1d5db !important; /* Ensure specific secondary text uses this shade */
+}
+
+.bottom-custom-text,
+.custom-icon {
+  color: #9ca3af;
+}
+
+/* Specific styling for social icons if not using Font Awesome or similar */
+.footer-section .text-secondary.mx-2 {
+  font-size: 1.2rem; /* Adjust icon size if actual icons are used */
+}
+
+.footer-section h6 {
+  color: #9ca3af;
+}
+
+/* Styling for the sticky contact widget */
+.sticky-contact-widget {
+  position: sticky;
+  bottom: 1px;
+  right: 1px;
+  width: fit-content;
+  z-index: 1;
+  overflow: hidden;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.sticky-contact-widget .btn {
+  padding: 12px 60px;
+  font-size: 15px;
+  border: none;
+  background-color: #2ab5cc;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  white-space: nowrap;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+.sticky-contact-widget .btn:hover {
+  background-color: #2190a3;
+}

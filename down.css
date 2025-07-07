@@ -1,0 +1,156 @@
+/* Custom colors and styles to match the original design */
+.section-bg-blue {
+  background-color: #e5fafb; /* Very light blue background for the top section */
+}
+
+.btn-primary-custom {
+  background-color: #1c8a9c; /* A shade of blue */
+  border-color: #1c8a9c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.btn-primary-custom:hover {
+  background-color: #2b7480; /* Darker blue on hover */
+  border-color: #1c8a9c;
+  color: white;
+}
+
+.text-uppercase-custom {
+  font-size: 0.875rem; /* text-sm */
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* tracking-wider */
+  color: #828282; /* text-gray-600 */
+  font-weight: 600; /* font-semibold */
+}
+
+.heading-1-custom {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: #374151; /* text-gray-900 */
+  line-height: 1.25; /* leading-tight */
+}
+
+.heading-2-custom {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #374151; /* text-gray-900 */
+  line-height: 1.25; /* leading-tight */
+}
+
+.paragraph-lg-custom {
+  font-size: 1.125rem; /* text-lg */
+  color: #374151; /* text-gray-700 */
+}
+
+.blockquote-custom {
+  border-top: 1px solid #d1d5db; /* border-t border-gray-300 */
+  color: #6b7280; /* text-gray-600 */
+  padding-top: 2rem; /* pt-8 */
+  margin-top: 3rem; /* mt-12 */
+}
+
+.blockquote-custom footer {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #374151; /* text-gray-700 */
+  margin-top: 0.5rem; /* mt-2 */
+  display: block; /* Ensure footer is on its own line */
+}
+
+.video-wrapper-custom {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 1rem; /* rounded-xl */
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.video-wrapper-custom iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #374151;
+  font-size: 1.8rem;
+}
+
+.brands-logo {
+  width: 60%;
+}
+
+@media (max-width: 991px) {
+  .image-style-custom {
+    display: none;
+  }
+  .text-uppercase-custom {
+    margin-top: 15px;
+  }
+  .brands-logo {
+    width: 70%;
+  }
+}
+
+@media (min-width: 576px) {
+  .heading-1-custom {
+    font-size: 3rem; /* sm:text-5xl */
+  }
+  .heading-2-custom {
+    font-size: 2.25rem; /* sm:text-4xl */
+  }
+}
+
+.bottom-section {
+  background: #2ab5cc;
+  color: white;
+  text-align: center;
+}
+
+.btn-bottom-section {
+  background-color: white;
+  color: #111827;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.btn-bottom-section:hover {
+  background-color: rgba(255, 255, 255, 0.829);
+  color: #111827;
+}
+
+@media (min-width: 992px) {
+  .brands-logo {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .brands-logo {
+    width: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .bottom-section .btn {
+    width: 70%;
+    display: block;
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .video-wrapper-custom {
+    margin-top: 10%;
+  }
+}
